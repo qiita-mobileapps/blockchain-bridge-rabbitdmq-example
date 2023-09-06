@@ -1,4 +1,4 @@
-# Blockchain Bridge RabbidMQ App Example
+# Blockchain Bridge RabbitMQ App Example
 
 Our user-friendly blockchain bridge app allows you to seamlessly exchange tokens between Source and Destination tokens. This straightforward application facilitates the connection of tokens across different blockchain networks, ensuring a quick and secure token swapping experience. It monitors events on the backend, handles events from smart contracts, and integrates them with RabbitMQ.
 
