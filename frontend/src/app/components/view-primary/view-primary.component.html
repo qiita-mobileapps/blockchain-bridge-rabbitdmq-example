@@ -1,0 +1,27 @@
+<p>Converting {{pryNetworkTicker}} into {{sndNetworkTicker}} for bridging.</p>
+  <ion-card>
+    <ion-card-header color="light">
+      <ion-card-title>{{pryNetworkTicker}} ➡ {{sndNetworkTicker}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p>Your amount : {{walletBalance}} {{pryNetworkTicker}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input [(ngModel)]="amount" label="Input your {{pryNetworkTicker}} amount" label-placement="floating" fill="outline" placeholder="0000 {{pryNetworkTicker}}"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button color="tertiary" shape="round" style="width: 100%;" (click)="doBridge()">Bridge to {{sndNetworkName}}</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+

@@ -1,0 +1,30 @@
+{
+  "name": "blockchain-bridge-rabbitdmq-app",
+  "version": "1.0.0",
+  "description": "Qiita-Mobileapps Blockchain bridge with RabbitMQ",
+  "main": "events-producer.js",
+  "scripts": {
+    "start:p": "node events-producer.js",
+    "start:c": "node events-consumer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiita-mobileapps/blockchain-bridge-rabbitdmq-app.git"
+  },
+  "keywords": [
+    "blockchain",
+    "bridge",
+    "simple"
+  ],
+  "author": "Qiita-Mobileapps Application Development Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qiita-mobileapps/blockchain-bridge-rabbitdmq-app/issues"
+  },
+  "homepage": "https://github.com/qiita-mobileapps/blockchain-bridge-rabbitdmq-app#readme",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.2"
+  }
+}

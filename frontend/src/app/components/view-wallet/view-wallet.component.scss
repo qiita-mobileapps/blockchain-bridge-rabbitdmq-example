@@ -1,0 +1,30 @@
+b {
+  width: 100%;
+}
+
+.ripple-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #ddd;
+  width: 30%;
+  user-select: none;
+}
+
+.rounded-rectangle {
+  width: 250px;
+  height: 75px;
+  border-radius: 8px;
+}
+
+ion-button {
+  --box-shadow: none;
+}
+
+ion-item {
+  --background: transparent;
+}

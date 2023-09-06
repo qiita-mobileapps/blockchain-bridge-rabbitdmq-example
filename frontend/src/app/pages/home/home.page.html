@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>{{appTitle}}</ion-title>
+    <app-view-wallet slot="end" class="toolbar-wallet"
+      [currentAccount]="currentAccount"
+      [currentNetwork]="currentNetwork"
+      [walletText]="walletText"
+      [walletButtonColor]="walletButtonColor"
+      [currentNetworkName]="currentNetworkName"
+      [isConnected]="isConnected"
+      (connectToWallet)="connectToWallet()"
+    ></app-view-wallet>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <H1>The Bridge to move tokens you own back and forth between them.</H1>
+  <ion-grid class="grid-top">
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col size="4" size-xs="12" size-sm="12" size-md="8" size-lg="8" size-xl="4">
+        <ion-segment [(ngModel)]="selectedSegment" mode="ios">
+          <ion-segment-button value="primary" (click)="segmentClicked()">
+            <ion-label *ngIf="!isWindowWidthSmall"><h2>Send to {{sndNetworkName}}</h2></ion-label>
+            <ion-label *ngIf="isWindowWidthSmall"><h2>Send to</h2></ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="secondary" (click)="segmentClicked()">
+            <ion-label *ngIf="!isWindowWidthSmall"><h2>Back into {{pryNetworkName}}</h2></ion-label>
+            <ion-label *ngIf="isWindowWidthSmall"><h2>Back into</h2></ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+      <ion-col></ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col size="3" size-xs="12" size-sm="12" size-md="8" size-lg="3" size-xl="3">
+            <ion-grid>
+              <ion-row *ngIf="isPrimary">
+                <ion-col>
+                  <app-view-primary
+                  [walletBalance]="walletBalance"
+                  (connectToWallet)="connectToWallet()"
+                  ></app-view-primary>
+                </ion-col>
+              </ion-row>
+              <ion-row *ngIf="!isPrimary">
+                <ion-col>
+                  <app-view-secondary
+                    [walletBalance]="walletBalance"
+                    (connectToWallet)="connectToWallet()"
+                  ></app-view-secondary> 
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="medium">
+    <ion-title><p>https://qiita.com/LJC-mobileapps</p></ion-title>
+  </ion-toolbar>
+</ion-footer>

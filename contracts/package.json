@@ -1,0 +1,35 @@
+{
+  "name": "qiitaapp-blockchain-bridge-contracts",
+  "version": "1.0.0",
+  "description": "Qiita-Mobileapps Blockchain bridge contracts",
+  "author": "Qiita-Mobileapps Application Development Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qiita-mobileapps/blockchain-bridge-rabbitdmq-app/issues"
+  },
+  "homepage": "https://github.com/qiita-mobileapps/blockchain-bridge-rabbitdmq-app#readme",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiita-mobileapps/blockchain-bridge-rabbitdmq-app.git"
+  },
+  "keywords": [
+    "blockchain",
+    "bridge",
+    "simple",
+    "app"
+  ],
+  "scripts": {
+    "deploy:p": "npx hardhat run ./scripts/deployPrimaryNetworkToken.js --network primary",
+    "deploy:s": "npx hardhat run ./scripts/deploySecondaryNetworkToken.js --network secondary"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.17.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "dotenv": "^16.3.1"
+  }
+}

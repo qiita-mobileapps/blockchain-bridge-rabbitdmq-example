@@ -1,0 +1,5 @@
+
+<ion-item lines="none">
+  <ion-label slot="end" *ngIf="isConnected">{{currentNetworkName}}</ion-label>
+  <ion-label slot="end"><ion-button color={{walletButtonColor}} (click)="onConnectToMetaMask()">{{walletText}}</ion-button></ion-label>
+</ion-item>

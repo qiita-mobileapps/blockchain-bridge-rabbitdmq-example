@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  //width: 400px;
+
+  margin: 0 auto;
+}
+
+ion-col {
+  text-align: center;
+}
+
+ion-input {
+  text-align: center;
+}
+
